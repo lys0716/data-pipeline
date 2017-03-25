@@ -1,0 +1,15 @@
+<coordinator-app name="daily-report"
+             start="${startTime}" end="${endTime}"
+             frequency="10 * * * *"
+             timezone="UTC"
+             xmlns="  uri:oozie:coordinator:0.4">
+<controls>
+<timeout>0</timeout>
+<concurrency>1</concurrency>
+</controls>
+  <action>
+    <workflow>
+      <app-path>${workflowPath}</app-path>
+    </workflow>
+  </action>
+</coordinator-app>
